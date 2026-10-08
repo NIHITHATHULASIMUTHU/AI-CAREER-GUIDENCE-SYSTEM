@@ -1,29 +1,76 @@
 # AI Career Guidance System
-  
-This is a project built with [Chef](https://chef.convex.dev) using [Convex](https://convex.dev) as its backend.
- You can find docs about Chef with useful information like how to deploy to production [here](https://docs.convex.dev/chef).
-  
-This project is connected to the Convex deployment named [`colorless-hedgehog-91`](https://dashboard.convex.dev/d/colorless-hedgehog-91).
-  
-## Project structure
-  
-The frontend code is in the `app` directory and is built with [Vite](https://vitejs.dev/).
-  
-The backend code is in the `convex` directory.
-  
-`npm run dev` will start the frontend and backend servers.
 
-## App authentication
+An AI-powered career guidance and recommendation system designed to help students and job seekers identify suitable career paths based on their skills, interests, education, and career preferences.
 
-Chef apps use [Convex Auth](https://auth.convex.dev/) with Anonymous auth for easy sign in. You may wish to change this before deploying your app.
+The system provides personalized career recommendations, skill-gap analysis, and guidance to help users make informed career decisions.
 
-## Developing and deploying your app
+---
 
-Check out the [Convex docs](https://docs.convex.dev/) for more information on how to develop with Convex.
-* If you're new to Convex, the [Overview](https://docs.convex.dev/understanding/) is a good place to start
-* Check out the [Hosting and Deployment](https://docs.convex.dev/production/) docs for how to deploy your app
-* Read the [Best Practices](https://docs.convex.dev/understanding/best-practices/) guide for tips on how to improve you app further
+## 🚀 Features
 
-## HTTP API
+- 👤 User profile creation
+- 🎯 Personalized career recommendations
+- 🧠 AI-based career prediction
+- 💡 Skill-based career matching
+- 📊 Skill-gap analysis
+- 📚 Recommended learning resources
+- 🔍 Career exploration
+- 🔐 User authentication
+- 📱 Responsive and user-friendly web interface
+- ⚡ Real-time data handling
+- 🌐 Backend API support
 
-User-defined http routes are defined in the `convex/router.ts` file. We split these routes into a separate file from `convex/http.ts` to allow us to prevent the LLM from modifying the authentication routes.
+---
+
+## 🏗️ System Architecture
+
+The system follows a simple three-layer architecture:
+
+```text
+              ┌─────────────────────┐
+              │       USER          │
+              │                     │
+              │ Skills              │
+              │ Education           │
+              │ Interests           │
+              │ Experience          │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │    FRONTEND         │
+              │                     │
+              │ Vite + React        │
+              │ User Interface      │
+              │ Forms & Dashboard   │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │   BACKEND & AI      │
+              │                     │
+              │ Data Processing     │
+              │ Career Matching     │
+              │ Recommendation      │
+              │ Skill Gap Analysis  │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │      DATABASE       │
+              │                     │
+              │ User Profiles       │
+              │ Skills              │
+              │ Career Information  │
+              │ Recommendations     │
+              │ Learning Resources  │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │       OUTPUT        │
+              │                     │
+              │ Career Suggestions  │
+              │ Skill Gaps          │
+              │ Learning Roadmap    │
+              └─────────────────────┘
